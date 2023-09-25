@@ -206,6 +206,7 @@
 .card-title {
   padding-bottom: 30px;
   font-size: 22px;
+  line-height: 120%;
   text-decoration: underline;
   text-transform: uppercase;
 }
@@ -224,7 +225,7 @@
   justify-items: center;
   align-items: start;
   gap: 25px;
-  padding-bottom: 155px;
+  padding-bottom: 156px;
 }
 
 .about__column{
@@ -237,7 +238,7 @@
 }
 
 .about__text {
-  padding-bottom: 25px;
+  padding-bottom: 27px;
 }
 
 /* Конец секции about */
