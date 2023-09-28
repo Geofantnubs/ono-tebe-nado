@@ -6,7 +6,15 @@
   height: 100%;
   margin: 0 auto;
   padding-right: 50px;
+  padding-bottom: 180px;
   padding-left: 50px;
+}
+
+/* title секций lots и about */
+.subtitle {
+  font-weight: 700;
+  font-size: 40px;
+  text-transform: uppercase;
 }
 
 /* Начало секции header */
@@ -14,44 +22,42 @@
 .header {
   padding-top: 92px;
   padding-bottom: 92px;
+  font-size: 18px;
 }
 
 .header__menu {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
   align-items: center;
-  font-size: 18px;
 }
 
 .header__menu-list {
   display: flex;
-  flex-grow: 1;
-  flex-basis: 0;
+  justify-self: start;
   gap: 32px;
-}
-
-.header__menu-list-items{
-  justify-content: space-between;
+  white-space: nowrap;
 }
 
 .item-bullit {
   list-style: circle;
 }
 
-.header__link-active,
-.footer__menu-link-active {
+.menu_link-active {
   text-decoration: none;
 }
 
-.header__address, .footer__address {
-  display: block;
+.address {
   font-style: normal;
   line-height: 24.3px;
 }
 
-.header__logo {
-  flex-grow: 1;
-  flex-basis: 0;
+.address_aligned-end {
+  justify-self: end;
+}
+
+.address-link {
+  display: block;
 }
 
 /* Конец секции header */
@@ -87,31 +93,26 @@
   text-transform: uppercase;
 }
 
-.aligned-text {
+.title_aligned-text {
   display: block;
   letter-spacing: 30px;
 }
 
-.aligned-text-left {
+.title_aligned-text-left {
   line-height: 115%;
 }
 
-.aligned-text_center {
+.title_aligned-text_center {
   padding: 20px 0;
   text-align: center;
 }
 
-.aligned-text_right {
-  letter-spacing: 60px;
+.title_aligned-text_right {
   text-align: right;
 }
 
 .letter-spasing-extended {
   letter-spacing: 60px;
-}
-
-.letter-spasing-little {
-  letter-spacing: 30px;
 }
 
 .letter-spasing-normal {
@@ -149,21 +150,23 @@
 
 /* Начало секции с lots */
 
-.lots {
-  padding-bottom: 180px;
-}
-
 .lots__title {
   padding: 0 0 27px 40px;
 }
 
 .lots__card-list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
   padding-bottom: 30px;
   text-decoration: none;
   list-style: none;
+}
+
+.lots__card-list-item {
+  flex-grow: 1;
+  flex-basis: 405px;
+  width: 100%;
 }
 
 .card-link {
@@ -178,29 +181,26 @@
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
-  min-height: 450px;
+  height: 450px;
   padding: 50px 40px;
   color: #fff;
   line-height: 120%;
   text-decoration: none;
-}
-
-.card_taype_film {
-  background: url(../images/card-lot-01.jpg);
   background-repeat: no-repeat;
+  background-position: top right;
   background-size: cover;
 }
 
-.card_taype_book {
-  background: url(../images/card-lot-02.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
+.card_type_film {
+  background-image: url(../images/card-lot-01.jpg);
 }
 
-.card_taype_picture {
-  background: url(../images/card-lot-03.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
+.card_type_book {
+  background-image: url(../images/card-lot-02.jpg);
+}
+
+.card_type_picture {
+ background-image: url(../images/card-lot-03.jpg);
 }
 
 .card-title {
@@ -225,7 +225,6 @@
   justify-items: center;
   align-items: start;
   gap: 25px;
-  padding-bottom: 156px;
 }
 
 .about__column{
@@ -234,11 +233,29 @@
 }
 
 .about__title {
-  padding: 100px 0;
+  padding: 103px 0;
 }
 
 .about__text {
-  padding-bottom: 27px;
+  padding-bottom: 25px;
+}
+
+.text_no-padding {
+  padding-bottom: 0;
+}
+
+.about__logo {
+  display:block;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  padding: 63px 46px;
+  background-color: #000;
+}
+
+.about__logo-image {
+  width: 148px;
+  height: 114px;
 }
 
 /* Конец секции about */
@@ -264,39 +281,14 @@
   gap: 48px;
 }
 
-/* Размеры логотипа в секциях header и about */
-.header__logo-img {
-  width: 148px;
-  height: 105px;
-}
-
-.about__logo-image {
-  width: 148px;
-  height: 114px;
-}
-
-/* Размер иконок социальных сетей в footer */
 .footer__social-icon {
   width: 48px;
   height: 48px;
 }
 
-/* Обработка логотипа на чёрном фоне в секции about */
-.about__logo {
-  display:block;
-  width: 240px;
-  height: 240px;
-  border-radius: 50%;
-  padding: 63px 46px;
-  background-color: #000;
-}
 
-/* title секций lots и about */
-.subtitle {
-  font-weight: 700;
-  font-size: 40px;
-  text-transform: uppercase;
-}
+
+
 
 
 
